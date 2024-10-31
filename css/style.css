@@ -1,0 +1,452 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+* {
+    font-size: large;
+}
+.hat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7vw;
+}
+
+
+
+div .desc {
+    display: flex;
+    width: 40vw;
+    height: 40vh;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    margin-top: 0.2vw;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    background-color: rgba(112, 111, 111, 0.377);
+    border-radius: 10px;
+
+}
+ul {
+    display: flex;
+    text-align: center;
+} 
+
+.navbar .icon {
+    display: none;
+}
+.navbar {
+    font-size: large;
+}
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #0c090b;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.navbar a:hover::after {
+    width: 100%;
+    color: white;
+}
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+a, a:hover, a:active, a:visited, a:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+.plang {
+    display: flex;
+}
+.lang {
+    display: flex;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-right: -0.5vw;
+}
+.bars {
+    display: flex;
+    flex-direction: column;
+}
+
+.lang ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.s-lang {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10vw;
+}
+
+.s-lang ul li{
+    display: flex;
+    align-items: center;
+}
+@keyframes progressgray {
+    0% {width: 0;}
+    100% {width: 200px;}
+
+}
+.progress {
+    background: #dedee0;
+    border-radius: 13px;
+    height: 15px;
+    width: 200px;
+    padding: 2px;
+    animation: progressgray 1s forwards;
+    
+}
+
+.progress:after {
+    content: '';
+    display: block;
+    background: rgb(15, 158, 51);
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+.textli {
+    margin-bottom: 1.2vh;
+}
+.photolist1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 10vh;
+}
+
+.photolist1 img:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
+.img {
+    width: 30vw;
+    height: 30vw;
+}
+
+
+footer {
+    min-height: 7vh;
+    gap: 25px;
+    margin-bottom: 5px;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(112, 111, 111, 0.377);
+    border-radius: 10px;
+}
+footer a:hover {
+    scale: 1.1;
+    transition: 0.2s;
+}
+#footmain {
+    margin-top: 10vh;
+}
+
+
+/* CONTACT WEBSITE */
+#contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+#contactform {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 30vw;
+
+}
+#foot {
+    margin-top: 26vh;
+}
+
+#contactform input, textarea, button {
+    border-radius: 8px;
+    border: 1px solid black
+}
+#contactform button {
+    background-color: rgba(233, 231, 238, 0.74);
+}
+#emailerrmsg {
+    visibility: hidden;
+    position: relative;
+    top: -5px;
+    font-size: small;
+    color: red;
+}
+
+.popup{
+    width: 400px;
+    background: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 60px;
+    color: #333;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: #e02189;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+/* CAREER WEBSITE */
+#footcar {
+    margin-top: 2.5vh;
+}
+
+.carrerstairs {
+    border-radius: 10px;
+    width: 95vw;
+    height: 85vh;
+    background-color: #8e8e9130;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.stairname {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.stair {
+    background-color: rgba(0, 0, 0, 0.275);
+    width: 10vw;
+}
+
+
+.stairtooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.stairtooltip .stairttooltiptext {
+    visibility: hidden;
+    width: 25vw;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -12.5vw;
+}
+.stairtooltip:hover,.stairname:hover .stairttooltiptext {
+    visibility: visible;
+    transition: 2s;
+}
+@keyframes firstanim {
+    from{height: 0;}
+    to{height: 20vh;}
+}
+@keyframes secondanim {
+    from{height: 0;}
+    to{height: 30vh;}
+}
+@keyframes thirdanim {
+    from{height: 0;}
+    to{height: 40vh;}
+}
+@keyframes fourthanim {
+    from{height: 0;}
+    to{height: 50vh;}
+}
+@keyframes fifthanim {
+    from{height: 0;}
+    to{height: 60vh;}
+}
+
+#first {
+    animation: firstanim 1s;
+    height: 20vh;
+}
+
+#second {
+    animation: secondanim 1s;
+    height: 30vh;
+}
+#third {
+    animation: thirdanim 1s;
+    height: 40vh;
+}
+#fourth {
+    animation: fourthanim 1s;
+    height: 50vh;
+}
+#fifth {
+    animation: fifthanim 1s;
+    height: 60vh;
+}
+
+
+/* PROJECTS WEBSITE */
+.projectssect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+.menudrop {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+}
+@keyframes animbuttons {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.dropbtn {
+    background-color: #163f65;
+    color: white;
+    width: 7vw;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    animation: animbuttons 1s;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    margin-top: 2px;
+    display: none;
+    position: absolute;
+    background-color: #ffffff00;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content button {
+    color: black;
+    width: 7vw;
+    margin-bottom: 2px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content button:hover {
+    background-color: #f1f1f1;
+    scale: 1.1;
+    transition: 0.1s;
+}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #163f6552;
+  }
+
+  .projectbox {
+    animation: animbuttons 1s;
+    background-color: rgba(211, 211, 211, 0.464);
+    width: 75vw;
+    height: 75vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectbox p {
+    color: black;
+    opacity: 1;
+  }

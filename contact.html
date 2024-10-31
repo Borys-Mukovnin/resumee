@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <!-- <meta name="description" content="">
+        <meta name="author" content="Borys Mukovnin">
+        <meta property="og:title" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" /> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <nav class="navbar" id="mynav">
+            <a href="index.html">Home</a>
+            <a href="career.html">Career</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="Navbar()"><i class="fa fa-bars"></i></a>
+        </nav>
+        <div id="contact">
+            <form name="contactform" id="contactform" method="POST" action="#">
+                <label for="name">Your name: </label>
+                <input type="text" id="name" placeholder="Name" title="Name" required>
+                <label for="email">Email: <span id="emailerrmsg">*Please enter a valid email</span></label>
+                <input type="text" id="email" placeholder="name@gmail.com" title="Email" required>
+                <label for="message">Your message: </label>
+                <textarea name="message" id="message" rows="10" cols="30" maxlength="300" placeholder="Maximum length: 300 symbols" required></textarea>
+                <input type="button" onclick="validateEmailInput();" value="Submit">
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <img src="">
+            <h2>Thank You!</h2>
+            <p>Your Details has been Succesfully Submitted.Thanks!</p>
+            <button type="button" onclick="closePopup()">OK</button>
+          </div> 
+        <footer id="foot">
+
+
+            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="icon_fbook" style="width: 40px; aspect-ratio: 1/1;"></a>
+            <a href="https://www.instagram.com"><img src="img/instagram.png" alt="icon_insta" style="width: 40px; aspect-ratio: 1/1;"></a>
+            <a href="https://www.x.com"><img src="img/twitter.png" alt="icon_x" style="width: 40px; aspect-ratio: 1/1;"></a>
+        
+        </footer>
+    </body>
+</html>
