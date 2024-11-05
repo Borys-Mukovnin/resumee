@@ -1,52 +1,106 @@
-const fs = require('fs');
-var username = "user";
-var password = "1234";
-function checkifEligible(dataset) {
+// var usernameval = document.querySelector("username").value;
+// var emailval = document.querySelector("email").value;
+var email = document.getElementById("email");
 
-  if (username === dataset.username && password === dataset.password) {
-    console.log("Logged in successfully");
-    return true;
+var rpassword = document.getElementById("rpassword");
+
+var username = document.getElementById("username");
+
+var password = document.getElementById("password");
+
+function validateEmailInput() {
+  var emailInput = document.getElementById('email').value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailRegex.test(emailInput)) {
+    console.log("Email is correct");
+    return true
+  } else {
+    email.style.borderColor = "red";
+    return false;
+  }
+
+}
+
+function inputValidation() {
+  username.style.borderColor = "gray";
+  email.style.borderColor = "gray";
+  password.style.borderColor = "gray";
+  rpassword.style.borderColor = "gray";
+  
+  if (document.getElementById("username").value == null || document.getElementById("username").value == "") {
+    username.style.borderColor = "red"; return;
+  }
+  if (document.getElementById("email").value == null || document.getElementById("email").value == "") {
+    email.style.borderColor = "red"; return;
+  } else { if (!validateEmailInput()) {return;};}
+  if (document.getElementById("password").value == null || document.getElementById("password").value == "") {
+    password.style.borderColor = "red"; return;
+  }
+  if (document.getElementById("rpassword").value == null || document.getElementById("rpassword").value == "") {
+    rpassword.style.borderColor = "red"; return;
+  }
+
+  passwordValidation();
+}
+
+function passwordValidation() {
+  var passwordval = document.getElementById("password").value;
+  var rpasswordval = document.getElementById("rpassword").value;
+  if (passwordval == rpasswordval) {
+      console.log("Passwords are identical")
+      registerForm();
+      console.log(passwordval,rpasswordval);
+  } else {
+    password.style.borderColor = "red";
+    rpassword.style.borderColor = "red";
+    console.log("Passwords are not same");
+    console.log(passwordval,rpasswordval);
   }
 }
 
+function registerForm() {
+  var datalist = getLocalData();
+  
+  var usernameval = document.getElementById("username").value;
+  var emailval = document.getElementById("email").value; 
+  var passwordval = document.getElementById("password").value;
+  
+  var data = {
+    username: usernameval,
+    email: emailval,
+    password: passwordval
+  };
+  datalist.push(data)
+  localStorage.datalist = JSON.stringify(datalist);
 
-fs.readFile('js/data.json', 'utf-8', (err, jsonString) => {
-  if (err) {
-    console.log(err);
-  } else {
-    try {
-      const data = JSON.parse(jsonString);
-      for (let index = 0; index < data.length; index++) {
+  window.location.href = "login.html";
+}
 
-        const element = data[index];
-        if (checkifEligible(element)) {
-          return true;
-        }
+function getLocalData() {
+  var datalist = JSON.parse(localStorage.datalist);
+  return datalist;
+}
 
-      }
-    } catch (err) {
-      console.log("Error prsing JSON", err);
+function loginCheck() {
+  var username = document.getElementById("usernamelogin").value;
+  var password = document.getElementById("passwordlogin").value;
+
+  var datalist = getLocalData();
+
+  for (let i = 0; i < datalist.length; i++) {
+    if (username == datalist[i].username && password == datalist[i].password) {
+      window.location.href = "../index.html";
+      return;
     }
   }
-});
+  console.log("Account doesn't exist. Please, register yourself");
+  
+}
 
-
-// const loginForm = document.getElementById("login-form");
-// const loginButton = document.getElementById("login-form-submit");
-// const loginErrorMsg = document.getElementById("login-error-msg");
-
-
-
-// loginButton.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     const username = loginForm.username.value;
-//     const password = loginForm.password.value;
-
-//     if (username === "user" && password === "1234") {
-//         alert("You have successfully logged in.");
-//         window.location.href = "index.html";
-//     } else {
-//         loginErrorMsg.style.opacity = 1;
-//     }
-// })
-
+function loginPagehref() {
+  window.location.href = "login.html";
+}
+function registerPagehref() {
+  window.location.href = "register.html";
+}

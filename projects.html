@@ -18,11 +18,23 @@
     </head>
     <body>
         <nav class="navbar" id="mynav">
-            <a href="index.html">Home</a>
-            <a href="career.html">Career</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="Navbar()"><i class="fa fa-bars"></i></a>
+            <div style="width: 20%; display: flex; flex-direction: column; justify-content: center;" class="dropdown">
+                <button class="dropbtn"  id="chooselang">EN</button>
+                <div class="dropdown-contentx">
+                  <a href="projects.html">EN</a>
+                  <a href="#">DE</a>
+                </div>
+            </div>
+            <div style="width: 60%; display: flex; justify-content: center; align-items: center; gap: 18px;" id="mainnav">
+                <a href="index.html">Home</a>
+                <a href="career.html">Career</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="Navbar()"><i class="fa fa-bars"></i></a>
+            </div>
+            <div style="width: 20%;display: flex; justify-content: right; align-items: center;">
+                <a id="logout" href="login/logorreg.html">Log out</a>
+            </div>
         </nav>
 
         <section class="projectssect">
@@ -30,9 +42,9 @@
             <div class="menudrop">
 
                 <div class="dropdown">
-                    <button class="dropbtn">ProjectCat1</button>
+                    <button class="dropbtn">Websites</button>
                     <div class="dropdown-content">
-                        <button type="button" id="but1" onclick="Textedit()">Button1</button>
+                        <button type="button" id="but1" onclick="createCodeSnippet(htmltext)">Projects</button>
                         <button type="button">Button1</button>
                         <button type="button">Button1</button>
                     </div>
@@ -63,13 +75,17 @@
                 </div>
 
             </div>
+            <div id="generalprojectbox">
 
-            <div class="projectbox">
-                <p id="textbox">Choose a category and a project name from the list above</p>
+                
+                <div class="projectbox" id="projectbox">
+                    <p id="textbox">Choose a category and a project name from the list above</p>
+                </div>
             </div>
-
+            
+            
         </section>
-        
+
         <footer id="footmain">
 
 

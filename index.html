@@ -18,23 +18,45 @@
     </head>
     <body>
         <nav class="navbar" id="mynav">
-            <a href="index.html">Home</a>
-            <a href="career.html">Career</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="Navbar()"><i class="fa fa-bars"></i></a>
+            <div style="width: 20%; display: flex; flex-direction: column; justify-content: center;" class="dropdown">
+                <button class="dropbtn"  id="chooselang">EN</button>
+                <div class="dropdown-contentx">
+                  <a href="index.html">EN</a>
+                  <a href="lang/de_de/index.html">DE</a>
+                </div>
+            </div>
+            <div class="navlink" style="width: 60%; display: flex; justify-content: center; align-items: center; gap: 18px;" id="mainnav">
+                <a href="index.html">Home</a>
+                <a href="career.html">Career</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="Navbar()"><i class="fa fa-bars"></i></a>
+            </div>
+            <div style="width: 20%;display: flex; justify-content: right; align-items: center;">
+                <a id="logout" href="login/logorreg.html">Log out</a>
+            </div>
         </nav>
 
         <div class="title">
             <div class="hat">
                 <h1 id="hattitle">Borys Mukovnin</h1>
-                <img id="hat" src="img/ph.png" alt="me" style="width:18vw;height:18vw;border-radius: 50px;">
+                <img id="hat" src="img/myphoto.jpg" alt="me">
             </div>
             <div class="desc">
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p>Name: Borys Mukovnin</p>
+                <p>Age: 18</p>
+                <p>Birth date: 25.09.2006</p>
+                <p>Hobbies: Don't kid  yourself</p>
+                <p>Company: AOK Rheinland/Hamburg</p>
+
+                
+                
+                
+                
+                
+                Job: Apprenticeship as a IT specialist for data and process analysis.  
             </div>
         </div>
-
         <section class="s-lang">
 
             <div class="plang">
@@ -70,10 +92,15 @@
                     <li><div class="progress"></div></li>
                     <li><div class="progress"></div></li>
                     <li><div class="progress"></div></li>
-
+                </ul>
+                <ul style="display: flex; flex-direction: column; gap: 7px;">
+                    <li>39%</li>
+                    <li>39%</li>
+                    <li>39%</li>
+                    <li>39%</li>
                 </ul>
             </div>
-            <div class="lang">
+            <!-- <div class="lang">
                 <ul>
                     <li class="textli">Data1</li>
                     <li class="textli">Data2</li>
@@ -86,6 +113,12 @@
                     <li><div class="progress"></div></li>
                     <li><div class="progress"></div></li>
 
+                </ul>
+                <ul style="display: flex; flex-direction: column; gap: 7px;">
+                    <li>39%</li>
+                    <li>39%</li>
+                    <li>39%</li>
+                    <li>39%</li>
                 </ul>
             </div>
             <div class="lang">
@@ -102,7 +135,13 @@
                     <li><div class="progress"></div></li>
 
                 </ul>
-            </div>
+                <ul style="display: flex; flex-direction: column; gap: 7px;">
+                    <li>39%</li>
+                    <li>39%</li>
+                    <li>39%</li>
+                    <li>39%</li>
+                </ul>
+            </div> -->
         </section>
 
         <section>
@@ -110,7 +149,7 @@
             <div class="photolist1">
                 <img class="img" src="img/ph.png" alt="icon_fbook">
                 <img class="img" src="img/ph.png" alt="icon_fbook">
-                <img class="img" src="img/ph.png" alt="icon_fbook">
+                <img class="img img3" src="img/ph.png" alt="icon_fbook">
                 
             </div>
 
