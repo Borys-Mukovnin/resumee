@@ -1,5 +1,7 @@
 // var usernameval = document.querySelector("username").value;
 // var emailval = document.querySelector("email").value;
+var arrayfill = [];
+localStorage.datalist = arrayfill;
 var email = document.getElementById("email");
 
 var rpassword = document.getElementById("rpassword");
