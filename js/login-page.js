@@ -1,5 +1,20 @@
-// var usernameval = document.querySelector("username").value;
-// var emailval = document.querySelector("email").value;
+if(localStorage.datalist == undefined){
+  localStorage.datalist = JSON.stringify([{
+    username: "Borys",
+    email: "borys@gmail.com",
+    password: "admin"
+ }]);
+}
+
+// var datalist = [];
+// var data = {
+//   username: "Borys",
+//   email: "borys@gmail.com",
+//   password: "admin"
+// };
+// datalist.push(data)
+// localStorage.datalist = JSON.stringify(datalist);
+
 var email = document.getElementById("email");
 
 var rpassword = document.getElementById("rpassword");
@@ -74,7 +89,7 @@ function registerForm() {
   datalist.push(data)
   localStorage.datalist = JSON.stringify(datalist);
 
-  window.location.href = "login.html";
+  location.replace("login.html");
 }
 
 function getLocalData() {
@@ -90,7 +105,7 @@ function loginCheck() {
 
   for (let i = 0; i < datalist.length; i++) {
     if (username == datalist[i].username && password == datalist[i].password) {
-      window.location.href = "../index.html";
+      location.replace("../index.html");
       return;
     }
   }
@@ -99,8 +114,8 @@ function loginCheck() {
 }
 
 function loginPagehref() {
-  window.location.href = "login.html";
+  location.replace("login.html");
 }
 function registerPagehref() {
-  window.location.href = "register.html";
+  location.replace("register.html");
 }

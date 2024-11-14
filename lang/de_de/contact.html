@@ -12,39 +12,39 @@
         <meta property="og:url" content="" /> -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="../../css/style.css">
+        <script src="../../js/script.js"></script>
         <title></title>
     </head>
     <body>
         <nav class="navbar" id="mynav">
             <div style="width: 20%; display: flex; flex-direction: column; justify-content: center;" class="dropdown">
-                <button class="dropbtn"  id="chooselang">EN</button>
+                <button class="dropbtn"  id="chooselang">DE</button>
                 <div class="dropdown-contentx">
-                  <a href="contact.html">EN</a>
-                  <a href="lang/de_de/contact.html">DE</a>
+                  <a href="../../contact.html">EN</a>
+                  <a href="contact.html">DE</a>
                 </div>
             </div>
             <div class="navlink" style="width: 60%; display: flex; justify-content: center; align-items: center; gap: 18px;" id="mainnav">
                 <a href="index.html">Home</a>
-                <a href="career.html">Career</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a href="career.html">Karriere</a>
+                <a href="projects.html">Projekte</a>
+                <a href="contact.html">Kontakt</a>
                 <a href="javascript:void(0);" class="icon" onclick="Navbar()"><i class="fa fa-bars"></i></a>
             </div>
             <div style="width: 20%;display: flex; justify-content: right; align-items: center;">
-                <a id="logout" href="login/logorreg.html">Log out</a>
+                <a id="logout" href="../../login/logorreg.html">Ausloggen</a>
             </div>
         </nav>
         <div id="contact">
             <form name="contactform" id="contactform" method="POST" action="#">
-                <label for="name">Your name: </label>
+                <label for="name">Ihr Name: </label>
                 <input type="text" id="name" placeholder="Name" title="Name" required>
-                <label for="email">Email: <span id="emailerrmsg">*Please enter a valid email</span></label>
+                <label for="email">Ihre Email: <span id="emailerrmsg">*Please enter a valid email</span></label>
                 <input type="text" id="email" placeholder="name@gmail.com" title="Email" required>
-                <label for="message">Your message: </label>
-                <textarea name="message" id="message" rows="10" cols="30" maxlength="300" placeholder="Maximum length: 300 symbols" required></textarea>
-                <input type="button" onclick="validateEmailInput();" value="Submit">
+                <label for="message">Ihre Nachricht: </label>
+                <textarea name="message" id="message" rows="10" cols="30" maxlength="300" placeholder="Maximale Länge: 300 symbols" required></textarea>
+                <input id="submitbuttoncontact" type="button" onclick="validateEmailInput();" value="Submit">
             </form>
         </div>
         <div class="popup" id="popup">
@@ -56,12 +56,12 @@
                 <button type="button" onclick="closePopup(); sendEmail()">Yes</button>
             </div>
           </div> 
-        <footer id="foot">
+        <footer id="footmain">
 
 
-            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="icon_fbook" style="width: 40px; aspect-ratio: 1/1;"></a>
-            <a href="https://www.instagram.com"><img src="img/instagram.png" alt="icon_insta" style="width: 40px; aspect-ratio: 1/1;"></a>
-            <a href="https://www.x.com"><img src="img/twitter.png" alt="icon_x" style="width: 40px; aspect-ratio: 1/1;"></a>
+            <a href="https://www.facebook.com"><img src="../../img/facebook.png" alt="icon_fbook" style="width: 40px; aspect-ratio: 1/1;"></a>
+            <a href="https://www.instagram.com"><img src="../../img/instagram.png" alt="icon_insta" style="width: 40px; aspect-ratio: 1/1;"></a>
+            <a href="https://www.x.com"><img src="../../img/twitter.png" alt="icon_x" style="width: 40px; aspect-ratio: 1/1;"></a>
         
         </footer>
     </body>

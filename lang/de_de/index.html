@@ -19,29 +19,84 @@
     <body>
         <nav class="navbar" id="mynav">
             <div style="width: 20%; display: flex; flex-direction: column; justify-content: center;" class="dropdown">
-                <button class="dropbtn"  id="chooselang">EN</button>
+                <button class="dropbtn"  id="chooselang">DE</button>
                 <div class="dropdown-contentx">
                   <a href="../../index.html">EN</a>
-                  <a href="../../lang/de_de/index.html">DE</a>
+                  <a href="index.html">DE</a>
                 </div>
             </div>
-            <div style="width: 60%; display: flex; justify-content: center; align-items: center; gap: 18px;" id="mainnav">
+            <div class="navlink" style="width: 60%; display: flex; justify-content: center; align-items: center; gap: 18px;" id="mainnav">
                 <a href="index.html">Home</a>
-                <a href="career.html">Career</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a href="career.html">Karriere</a>
+                <a href="projects.html">Projekte</a>
+                <a href="contact.html">Kontakt</a>
                 <a href="javascript:void(0);" class="icon" onclick="Navbar()"><i class="fa fa-bars"></i></a>
             </div>
-            <div style="width: 20%;"></div>
+            <div style="width: 20%;display: flex; justify-content: right; align-items: center;">
+                <a id="logout" href="../../login/logorreg.html">Ausloggen</a>
+            </div>
         </nav>
+
+        <div id="popupforum1" class="popupforum">
+            <div style="color: rgb(5, 5, 4); text-align: right;margin-right: 0.5vw;margin-top: 0.5vw;">
+                <button id="closebutpop" onclick="forumClosePopup1()">Close</button>
+            </div>
+            <div style="display: flex; color: black;align-items: center;">
+                <div style="margin-left: 1vw;">
+                    <h1>Some title</h1>
+                    <img src="../../img/ph.png" alt="">
+                </div>
+                
+                <p style="margin-left: 0.5vw;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <div></div>
+        </div>
+
+        <div id="popupforum2" class="popupforum">
+            <div style="color: rgb(5, 5, 4); text-align: right;margin-right: 0.5vw;margin-top: 0.5vw;">
+                <button id="closebutpop" onclick="forumClosePopup2()">Close</button>
+            </div>
+            <div style="display: flex; color: black;align-items: center;">
+                <div style="margin-left: 1vw;">
+                    <h1>Some title</h1>
+                    <img src="../../img/ph.png" alt="">
+                </div>
+                
+                <p style="margin-left: 0.5vw;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <div></div>
+        </div>
+
+        <div id="popupforum3" class="popupforum">
+            <div style="color: rgb(5, 5, 4); text-align: right;margin-right: 0.5vw;margin-top: 0.5vw;">
+                <button id="closebutpop" onclick="forumClosePopup3()">Close</button>
+            </div>
+            <div style="display: flex; color: black;align-items: center;">
+                <div style="margin-left: 1vw;">
+                    <h1>Some title</h1>
+                    <img src="../../img/ph.png" alt="">
+                </div>
+                
+                <p style="margin-left: 0.5vw;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            
+            <div></div>
+        </div>
 
         <div class="title">
             <div class="hat">
-                <h1 id="hattitle">Borys Mukovnin DE</h1>
-                <img id="hat" src="img/ph.png" alt="me">
+                <h1 id="hattitle">Borys Mukovnin</h1>
+                <img id="hat" src="../../img/myphoto.jpg" alt="me">
             </div>
             <div class="desc">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                <p>Name: Borys Mukovnin</p>
+                <p>Alter: 18</p>
+                <p>Geburtsdatum: 25.09.2006</p>
+                <p>Hobbys: Sport, Gaming</p>
+                <p>Unternehmen: AOK Rheinland/Hamburg</p>
+                <p>Stelle: Auszubildender zur Daten- und Prozessanalyse</p>
             </div>
         </div>
         <section class="s-lang">
@@ -54,17 +109,17 @@
                     <li class="textli">JavaScript</li>
                 </ul>
                 <ul class="bars">
-                    <li><div class="progress"></div></li>
-                    <li><div class="progress"></div></li>
-                    <li><div class="progress"></div></li>
-                    <li><div class="progress"></div></li>
+                    <li><div class="progress progressgreen"></div></li>
+                    <li><div class="progress progressyellow"></div></li>
+                    <li><div class="progress progressblue"></div></li>
+                    <li><div class="progress progressred"></div></li>
                 </ul>
-                <ul style="display: flex; flex-direction: column; gap: 7px;">
+                <!-- <ul style="display: flex; flex-direction: column; gap: 7px;">
+                    <li>5%</li>
+                    <li>15%</li>
                     <li>39%</li>
                     <li>39%</li>
-                    <li>39%</li>
-                    <li>39%</li>
-                </ul>
+                </ul> -->
             </div>
 
             <div class="lang">
@@ -75,19 +130,19 @@
                     <li class="textli">Russian</li>
                 </ul>
                 <ul class="bars">
-                    <li><div class="progress"></div></li>
-                    <li><div class="progress"></div></li>
-                    <li><div class="progress"></div></li>
-                    <li><div class="progress"></div></li>
+                    <li><div class="progress progressblue" id="progresslangblue"></div></li>
+                    <li><div class="progress progressred" id="progresslangred"></div></li>
+                    <li><div class="progress progressgreen" id="progresslanggreen"></div></li>
+                    <li><div class="progress progressyellow" id="progresslangyellow"></div></li>
                 </ul>
-                <ul style="display: flex; flex-direction: column; gap: 7px;">
+                <!-- <ul style="display: flex; flex-direction: column; gap: 7px;">
                     <li>39%</li>
                     <li>39%</li>
                     <li>39%</li>
                     <li>39%</li>
-                </ul>
+                </ul> -->
             </div>
-            <div class="lang">
+            <!-- <div class="lang">
                 <ul>
                     <li class="textli">Data1</li>
                     <li class="textli">Data2</li>
@@ -128,25 +183,70 @@
                     <li>39%</li>
                     <li>39%</li>
                 </ul>
-            </div>
+            </div> -->
         </section>
 
-        <section>
+        <section style="display: flex; justify-content: center; margin-top: 10vh;">
+            
+            <div class="forumdiv">
+                <button onclick="forumOpenPopup1()" style="border: none; background-color: white;">
+                    <div class="forumdivitem">
+                        <div style="height: 20%;">
+                            <p class="forumdivheader">Forum News#1</p>   
+                        </div>
+                        <div style="height: 60%; display: flex; align-items: center;">
+                            <p>Dies ist die Kurzfassung eines Artikels über mich.</p>
+                        </div>
+                        <div style="height: 20%; display: flex;align-items: flex-end; justify-content: center;">
+                            dies ist die Fußzeile mit weiteren Links.
+                        </div>
+                    </div>
+                </button>
+                
+                <button onclick="forumOpenPopup2()" style="border: none; background-color: white;">
+                    <div class="forumdivitem">
+                        <div style="height: 20%;">
+                            <p class="forumdivheader">Forum News#1</p>   
+                        </div>
+                        <div style="height: 60%; display: flex; align-items: center;">
+                            <p>Dies ist die Kurzfassung eines Artikels über mich.</p>
+                        </div>
+                        <div style="height: 20%; display: flex;align-items: flex-end; justify-content: center;">
+                            dies ist die Fußzeile mit weiteren Links.
+                        </div>
+                    </div>
+                </button>
 
-            <div class="photolist1">
+                <button onclick="forumOpenPopup3()" style="border: none; background-color: white;">
+                    <div class="forumdivitem">
+                        <div style="height: 20%;">
+                            <p class="forumdivheader">Forum News#1</p>   
+                        </div>
+                        <div style="height: 60%; display: flex; align-items: center;">
+                            <p>Dies ist die Kurzfassung eines Artikels über mich.</p>
+                        </div>
+                        <div style="height: 20%; display: flex;align-items: flex-end; justify-content: center;">
+                            dies ist die Fußzeile mit weiteren Links.
+                        </div>
+                    </div>
+                </button>
+            </div>
+            
+
+            <!-- <div class="photolist1">
                 <img class="img" src="img/ph.png" alt="icon_fbook">
                 <img class="img" src="img/ph.png" alt="icon_fbook">
                 <img class="img img3" src="img/ph.png" alt="icon_fbook">
                 
-            </div>
+            </div> -->
 
         </section>
     <footer id="footmain">
 
 
-            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="icon_fbook" style="width: 40px; aspect-ratio: 1/1;"></a>
-            <a href="https://www.instagram.com"><img src="img/instagram.png" alt="icon_insta" style="width: 40px; aspect-ratio: 1/1;"></a>
-            <a href="https://www.x.com"><img src="img/twitter.png" alt="icon_x" style="width: 40px; aspect-ratio: 1/1;"></a>
+            <a href="https://www.facebook.com"><img src="../../img/facebook.png" alt="icon_fbook" style="width: 40px; aspect-ratio: 1/1;"></a>
+            <a href="https://www.instagram.com"><img src="../../img/instagram.png" alt="icon_insta" style="width: 40px; aspect-ratio: 1/1;"></a>
+            <a href="https://www.x.com"><img src="../../img/twitter.png" alt="icon_x" style="width: 40px; aspect-ratio: 1/1;"></a>
         
     </footer>
     </body>

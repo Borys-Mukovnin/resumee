@@ -1,35 +1,13 @@
-/* @use ''; */
-body {
-    overflow-x: hidden;
-}
-.title {
-    display: grid;
+var htmltext = "This is a Snippet-HTML code of this resumee website."
+var csstext = `.title {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    grid-template-columns: auto auto;
 }
-
 
 * {
     font-size: large;
 }
-#hat {
-    border-radius: 50px;
-    width: 18vw;
-    height: 25vw;
-}
-#hat:hover {
-    scale: 1.02;
-    transition: 0.2s;
-}
-.desc {
-    display: flex;
-    flex-direction: column;
-    width: 40vw;
-    height: 40vh;
-    align-items: flex-start;
-    justify-content: center;
-}
+
 .hat {
     display: flex;
     flex-direction: column;
@@ -37,22 +15,22 @@ body {
     align-items: center;
     margin-right: 7vw;
 }
-#chooselang {
-    width: 70px;
-    height: 40px;
+
+
+
+div .desc {
+    display: flex;
+    width: 40vw;
+    height: 40vh;
+    align-items: center;
 }
-
-
-
 
 .navbar {
     display: flex;
-    width: 100vw; 
-    justify-content: space-between;
     margin-top: 0.2vw;
-    /* justify-content: center; */
+    justify-content: center;
     gap: 30px;
-    /* align-items: center; */
+    align-items: center;
     background-color: rgba(112, 111, 111, 0.377);
     border-radius: 10px;
 
@@ -74,16 +52,8 @@ ul {
 .navbar a {
     position: relative;
 }
-#logout {
-    background-color: lightgreen;
-    border-radius: 5px;
-    padding: 5px;
-    box-shadow: 1px 1px;
-}
-#logout:hover {
-    opacity: 0.5;
-}
-.navlink a::after {
+
+.navbar a::after {
     content: '';
     width: 0%;
     height: 3px;
@@ -99,53 +69,35 @@ ul {
     color: white;
 }
 
-.forumdiv {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    row-gap: 18px;    
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
 }
-.forumdivitem:hover {
-    scale: 1.1;
-    transition: 0.1s;
-}
-.forumdivitem {
-    width: 20vw;
-    height: 20vw;
-    background-color: rgba(228, 222, 222, 0.871);
-    box-shadow: 5px 5px rgb(144, 143, 143);
-    color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.popupforum {
-    width: 50vw;
-    height: 70vh;
-    z-index: 2;
-    display: none;
-    background-color: rgb(228, 222, 222);
-    position: fixed;
-    top: 18vh;
-    left: 25vw;
-    border-radius: 5px;
-    box-shadow: 4px 4px rgb(144, 143, 143);
-}
-@keyframes forumopenpopup {
-    from{width: 0;height: 0;top: 0;left: 0;}
-    to{width: 50vw;height: 70vh;top: 18vh;left: 25vw;}
-}
-.popupforumopen {
-    animation: forumopenpopup 0.5s;
-    display: flex;
-    flex-direction: column;
-}
-#closebutpop:hover {
-    background-color: red;
-    color: white;
-}
+
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
 
 a,
 a:hover,
@@ -182,12 +134,11 @@ a:focus {
 }
 
 .s-lang {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 5vw;
+    margin-top: 10vw;
 }
-
 
 .s-lang ul li {
     display: flex;
@@ -214,66 +165,23 @@ a:focus {
     animation: progressgray 1s forwards;
 
 }
-.progressgreen::after {
-    content: '';
-    display: block;
-    background: rgb(15, 158, 51);
-    width: 5%;
-    height: 100%;
-    border-radius: 9px;
-}
-.progressyellow::after {
-    content: '';
-    display: block;
-    background: yellow;
-    width: 15%;
-    height: 100%;
-    border-radius: 9px;
-}
-.progressblue::after {
-    content: '';
-    display: block;
-    background: blue;
-    width: 10%;
-    height: 100%;
-    border-radius: 9px;
-}
-.progressred::after {
-    content: '';
-    display: block;
-    background: red;
-    width: 7%;
-    height: 100%;
-    border-radius: 9px;
-}
-#progresslangblue::after {
-    width: 70%;
-}
-#progresslangred::after {
-    width: 40%;
-}
-#progresslanggreen::after {
-    width: 80%;
-}
-#progresslangyellow::after {
-    width: 60%;
-}
-/* .progress:after {
+
+.progress:after {
     content: '';
     display: block;
     background: rgb(15, 158, 51);
     width: 50%;
     height: 100%;
     border-radius: 9px;
-} */
+}
 
 .textli {
     margin-bottom: 1.2vh;
 }
 
 .photolist1 {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 2vw;
     margin-top: 10vh;
@@ -310,12 +218,7 @@ footer a:hover {
 #footmain {
     margin-top: 10vh;
 }
-#submitbuttoncontact {
-    background-color: lightgrey;
-}
-#submitbuttoncontact:hover {
-    opacity: 0.5;
-}
+
 
 /* CONTACT WEBSITE */
 #contact {
@@ -448,7 +351,7 @@ button {
 
 .stairtooltip .stairttooltiptext {
     visibility: hidden;
-    width: 15vw;
+    width: 25vw;
     background-color: rgb(0, 0, 0);
     color: #fff;
     text-align: center;
@@ -459,7 +362,7 @@ button {
     z-index: 1;
     bottom: 100%;
     left: 50%;
-    margin-left: -7.5vw;
+    margin-left: -12.5vw;
 }
 
 .stairtooltip:hover,
@@ -518,8 +421,6 @@ button {
     }
 }
 
-
-
 #first {
     animation: firstanim 1s;
     height: 20vh;
@@ -571,9 +472,6 @@ button {
 }
 
 .dropbtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #163f65;
     color: white;
     width: 7vw;
@@ -589,48 +487,24 @@ button {
     display: inline-block;
 }
 
-.dropdown-contentx {
 
-    display: none;
-    position: absolute;
-    top: 4.5vh;
-    background-color: #ffffff00;
-    z-index: 1;
-}
-.dropdown-contentx a {
-    width: 70px;
-    margin-top: 2px;
-    background-color: lightgrey;
-    border-radius: 5px;
-    display: block;
-    text-align: center;
-}
-.dropdown-contentx a:hover {
-    opacity: 0.5;
-}
 .dropdown-content {
+    margin-top: 1px;
     display: none;
     position: absolute;
     background-color: #ffffff00;
     z-index: 1;
 }
-.dropdown-content button {
-    width: 7vw;
-    margin-top: 2px;
-    background-color: lightgrey;
-    border-radius: 5px;
-    display: block;
-    text-align: center;
-}
 
-/* .dropdown-content a {
+
+.dropdown-content button {
     color: black;
     width: 7vw;
     margin-bottom: 2px;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-} */
+}
 
 
 .dropdown-content button:hover {
@@ -641,9 +515,6 @@ button {
 
 
 .dropdown:hover .dropdown-content {
-    display: block;
-}
-.dropdown:hover .dropdown-contentx {
     display: block;
 }
 
@@ -687,87 +558,133 @@ button {
     align-items: center;
 }
 
+/* .textboxdiv {
+    display: flex;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+} */
+
 .textbox {
     height: 95%;
     overflow-y: auto;
     width: 70%;
 }
+`;
+var jstext = `
+function Navbar() {
+  var x = document.getElementById("mynav");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+
+function Textedit() {
+  document.getElementById('textbox').innerHTML = "This function is currently in development. Come back later!";
+}
 
 
-@media screen and (max-width: 1400px) {
-    .s-lang {
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-    }
-    .photolist1 {
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-    }
+
+function openPopup() {
+  let popup = document.getElementById('popup');
+  popup.classList.add('open-popup');
 
 }
 
-@media screen and (max-width: 600px) {
-    .forumdiv {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-    }
-    .forumdivitem {
-        width: 65vw;
-        height: 50vh;
-    }
-    .popupforum {
-        width: 75vw;
-        left: 11vw;
-    }
-    .popupforumopen {
-        animation: none;
-    }
-    #hat {
-        width: 50vw;
-        height: 70vw;
-    }
-    .title {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-    }
-    .navbar a:not(:first-child) {
-        display: none;
-    }
-    .desc {
-        display: flex;
-        flex-direction: column;
-        width: 70vw;
-    }
-    .navbar a.icon {
-        float: right;
-        display: block;
-    }
-    .navbar.responsive {
-        position: relative;
-    }
+function closePopup() {
+  let popup = document.getElementById('popup');
+  popup.classList.remove('open-popup');
+  document.getElementById("contactform").submit();
 
-    .navbar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    .s-lang {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-    }
-    
-    .img {
-        width: 70vw;
-        height: 70vw;
-    }
-    .photolist1 {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-    }
 }
+
+function validateEmailInput() {
+  const emailInput = document.getElementById('email').value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const eF = document.getElementById('email');
+  const errMsg = document.getElementById('emailerrmsg');
+
+  if (emailRegex.test(emailInput)) {
+    openPopup();
+  } else {
+    eF.style.borderColor = "red";
+    eF.style.borderWidth = "2px";
+    eF.style.backgroundColor = "#ff000035";
+    errMsg.style.visibility = 'visible';
+    return;
+  }
+
+}
+
+let htmltext = "This is a Snippet-HTML code of this resumee website."
+let csstext = "css_text"
+let jstext = "js_text"
+
+function sendEmail() {
+  var fname = document.getElementById("name").value;
+  var emailform = document.getElementById("email").value;
+  var msg = document.getElementById("message").value;
+  console.log(fname);
+  window.open("mailto:borys.mukovnin1@rh.aok.de?subject=Email%20from%20" + fname + "&body=" + msg + "%20Email%20to%20contact%20back:%20" + emailform);
+}
+
+function createWebsiteButtons() {
+  var divbuttons = document.createElement("div");
+  divbuttons.classList.add('webbuttons');
+
+
+  var htmlbutton = document.createElement('button');
+  var cssbutton = document.createElement('button');
+  var jsbutton = document.createElement('button');
+
+  htmlbutton.innerHTML = "HTML";
+  cssbutton.innerHTML = "CSS";
+  jsbutton.innerHTML = "JS";
+
+  htmlbutton.onclick = function() {
+    createCodeSnippet(htmltext);
+  };
+  cssbutton.onclick = function() {
+    createCodeSnippet(csstext);
+  };
+  jsbutton.onclick = function() {
+    createCodeSnippet(jstext);
+  };
+
+  divbuttons.appendChild(htmlbutton);
+  divbuttons.appendChild(cssbutton);
+  divbuttons.appendChild(jsbutton);
+
+  document.querySelector("#generalprojectbox").appendChild(divbuttons);
+}
+
+function createCodeBox(text) {
+  var codeboxdiv = document.createElement("div");
+  codeboxdiv.classList.add('codeboxdiv');
+  
+  // var textboxdiv = document.createElement("div");
+  // textboxdiv.classList.add('textboxdiv');
+  
+  var textbox = document.createElement('pre');
+  textbox.innerHTML = text;
+  textbox.classList.add('textbox');
+
+  // textboxdiv.appendChild(textbox);
+  codeboxdiv.appendChild(textbox);
+
+  document.querySelector("#generalprojectbox").appendChild(codeboxdiv)
+}
+
+function createCodeSnippet(text = "This is default text") {
+
+  document.querySelector("#generalprojectbox").innerHTML = '';
+
+  createWebsiteButtons();
+  
+  createCodeBox(text);
+}
+`;
